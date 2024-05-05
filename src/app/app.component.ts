@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet, AsyncPipe, JsonPipe],
   template: `
     <h1>Example app</h1>
-    <pre><code>{{ res | async | json }}</code></pre>
+    <!-- <pre><code>{{ res | async | json }}</code></pre> -->
     <router-outlet />
   `,
   styles: [],
@@ -17,6 +17,6 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   private http = inject(HttpClient);
 
-  res = this.http.get('/api/hello');
+  // res = this.http.get('/api');
 }
 
